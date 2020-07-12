@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSA - Status Hit</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+    <div class="container">
+        <h1 class="text-center display-3">Calcule chance de acerto do seu personagem!</h1><hr>
+        <form method="GET">
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="level-atk">Qual o level do seu cavaleiro?</label>
+                    <input type="number" class="form-control" name="level-atk" id="level-atk">
+                </div>
+                
+                <div class="form-group col-md-6">
+                    <label for="level-aim">Qual o level do alvo?</label>
+                    <input type="number" class="form-control" name="level-aim" id="level-aim">
+                </div>
+                
+            </div>
+
+            <div class="form-row">
+                
+                <div class="form-group col-md-4">
+                    <label for="status-hit">Qual o seu acerto de status atual?</label>
+                    <input type="number" class="form-control" name="status-hit" id="status-hit">
+                </div>
+            
+                <div class="form-group col-md-4">
+                    <label for="status-hit-skill">Qual o acerto de status base da sua habilidade?</label>
+                    <input type="number" class="form-control" name="status-hit-skill" id="status-hit-skill">
+                    <small id="status-hit-skill" class="form-text text-muted">É a porcentagem de acerto que aparece no texto da habilidade.</small>
+                </div>
+            
+                <div class="form-group col-md-4">
+                    <label for="status-resist">Qual a resistência de status do alvo?</label>
+                    <input type="number" class="form-control" name="status-resist" id="status-resist">
+                </div>
+                
+            </div>
+            <hr>
+
+            <h1 id="result" class="text-center display-3"></h1>
+
+            
+        </form>
+
+        <button class="btn btn-primary" onclick="capturar()">Calcular</button>
+        <button class="btn btn-secondary" onclick="limpar()">Limpar</button>
+    </div>
+
+    <!-- Links JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="functions.js"></script>
+</body>
+</html>
