@@ -13,3 +13,9 @@ input[type=number] {
 .green {
     color: #2add72;
 }
+
+.rodape {
+    text-align: center;
+    color: #999;
+    font-size: .8em;
+}

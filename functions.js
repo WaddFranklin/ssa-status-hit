@@ -7,9 +7,10 @@ function capturar() {
     var statusResist = document.getElementById("status-resist").value;
 
     var increaseFactor = (statusHitSkill/100) * (1.0 + (statusHit/100));
-    var levelDiference = ((aimLevel - atkLevel)/100)*0.02;
+    var levelDiference = 1.0 + ((atkLevel - aimLevel)*0.02);
+    statusResist = 1 + (statusResist/100);
 
-    var total = Math.ceil((increaseFactor - levelDiference - (statusResist/100))*100);
+    var total = Math.ceil((increaseFactor * levelDiference)/(statusResist/100));
 
     result.innerHTML = "Você tem " + total + "% de chance de acertar!";
 }
